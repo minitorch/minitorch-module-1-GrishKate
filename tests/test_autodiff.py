@@ -19,6 +19,7 @@ class Function1(ScalarFunction):
     @staticmethod
     def backward(ctx: Context, d_output: float) -> Tuple[float, float]:
         "Derivatives are $f'_x(x, y) = 1$ and $f'_y(x, y) = 1$"
+        print('here', d_output)
         return d_output, d_output
 
 
